@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Sistema de Notificações</h2>
+
+  <div class="input-area">
+    <input [(ngModel)]="conteudoMensagem" placeholder="Digite sua mensagem" />
+    <button (click)="enviar()">Enviar</button>
+  </div>
+
+  <ul>
+    <li *ngFor="let n of notificacoes">
+      <div>
+        <strong>{{n.mensagemId}}</strong><br>
+        "{{n.conteudoMensagem}}"
+      </div>
+      <span [ngClass]="{'ok': n.status==='PROCESSADO_SUCESSO', 'fail': n.status==='FALHA_PROCESSAMENTO'}">
+        {{n.status}}
+      </span>
+    </li>
+  </ul>
+</div>
