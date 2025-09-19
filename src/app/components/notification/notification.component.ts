@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Notificacao, NotificationService } from '../../services/notification.service';
+import { Notificacao, NotificationService } from '../../services/notification/notification.service';
 
 
 @Component({
